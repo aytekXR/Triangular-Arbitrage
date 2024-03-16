@@ -44,11 +44,11 @@ class ArbitrageCalculator:
             print("Encountered division by zero due to a rate being 0.")
             return False
 
-async def check_arbitrage_opportunity(self, binance_ws, arbitrage_calculator):
+async def check_arbitrage_opportunity(binance_ws, arbitrage_calculator):
     while True:
         ask_prices = binance_ws.get_ask_prices()
         if ask_prices:
-            opportunity_exists = self.calculate_triangular_arbitrage_availability(ask_prices)
+            opportunity_exists = arbitrage_calculator.calculate_triangular_arbitrage_availability(ask_prices)
             print(f"Arbitrage Opportunity: {'Yes' if opportunity_exists else 'No'}")
         await asyncio.sleep(1)
 
@@ -59,7 +59,7 @@ async def main():
     # Run both the WebSocket connection and the arbitrage check concurrently
     await asyncio.gather(
         binance_ws.connect(),
-        arbitrage_calculator.check_arbitrage_opportunity(binance_ws)
+        check_arbitrage_opportunity(binance_ws,arbitrage_calculator)
     )
 
 if __name__ == "__main__":

@@ -1,64 +1,66 @@
+import asyncio
 import json
-import websocket
+import websockets
 
 class BinanceWebSocket:
     def __init__(self, assets):
         self.base_url = "wss://stream.binance.com:9443/stream?streams="
         self.assets = [coin.lower() + '@bookTicker' for coin in assets]
-        self.ask_prices = {asset: None for asset in self.assets}  # Initialize ask prices dict
-        self.update_url()
-        self.ws = None
-
-    def update_url(self):
+        self.ask_prices = {asset: None for asset in self.assets}
         self.streams = '/'.join(self.assets)
         self.socket = f"{self.base_url}{self.streams}"
 
-    def on_message(self, ws, message):
+    async def on_message(self, message):
         message = json.loads(message)
-        # Extract the asset and its ask price from the message
         asset = message['data']['s'].lower() + '@bookTicker'
-        ask_price = message['data']['a']
-        # Update the ask price in the state
+        ask_price = float(message['data']['a'])  # Convert ask price to float
         if asset in self.ask_prices:
             self.ask_prices[asset] = ask_price
-        print(message)
-        print("xxxxxxxxxxxxxxx\n")
 
-    def on_open(self, ws):
-        print("Opened connection")
-
-    def on_close(self, ws, close_status_code, close_msg):
-        print("Closed connection")
-
-    def add_assets(self, new_assets):
-        new_streams = [coin.lower() + '@bookTicker' for coin in new_assets]
-        self.assets.extend(new_streams)
-        # Update ask_prices dict with new assets
-        for asset in new_streams:
-            self.ask_prices[asset] = None
-        self.update_url()
-        if self.ws:
-            subscribe_message = json.dumps({
-                "method": "SUBSCRIBE",
-                "params": new_streams,
-                "id": 1
-            })
-            self.ws.send(subscribe_message)
+    async def connect(self):
+        async with websockets.connect(self.socket) as ws:
+            print("Opened connection")
+            async for message in ws:
+                await self.on_message(message)
+            print("Closed connection")
 
     def get_ask_prices(self):
-        # Return a list of the latest ask prices for subscribed assets
-        return [self.ask_prices[asset] for asset in self.ask_prices if self.ask_prices[asset] is not None]
+        return {asset: self.ask_prices[asset] for asset in self.ask_prices if self.ask_prices[asset] is not None}
 
-    def run(self):
-        self.ws = websocket.WebSocketApp(self.socket,
-                                         on_message=self.on_message,
-                                         on_open=self.on_open,
-                                         on_close=self.on_close)
-        self.ws.run_forever()
+class ArbitrageCalculator:
+    def calculate_triangular_arbitrage_availability(self, rates):
+        # Simplified example assuming we're checking for BTC->ETH->USDT->BTC arbitrage loop
+        try:
+            btc_to_eth = 1 / rates['ethbtc@bookTicker']
+            eth_to_usdt = rates['ethusdt@bookTicker']
+            usdt_to_btc = 1 / rates['btcusdt@bookTicker']
+            
+            final_btc = 1 * btc_to_eth * eth_to_usdt * usdt_to_btc
+            return final_btc > 1
+        except KeyError as e:
+            print(f"Missing rate for currency pair: {e}")
+            return False
+        except ZeroDivisionError:
+            print("Encountered division by zero due to a rate being 0.")
+            return False
+
+async def check_arbitrage_opportunity(binance_ws, arbitrage_calculator):
+    while True:
+        ask_prices = binance_ws.get_ask_prices()
+        if ask_prices:
+            opportunity_exists = arbitrage_calculator.calculate_triangular_arbitrage_availability(ask_prices)
+            print(f"Arbitrage Opportunity: {'Yes' if opportunity_exists else 'No'}")
+        await asyncio.sleep(1)
+
+async def main():
+    assets = ['BTCUSDT', 'ETHBTC', 'ETHUSDT']
+    binance_ws = BinanceWebSocket(assets)
+    arbitrage_calculator = ArbitrageCalculator()
+    # Run both the WebSocket connection and the arbitrage check concurrently
+    await asyncio.gather(
+        binance_ws.connect(),
+        check_arbitrage_opportunity(binance_ws,arbitrage_calculator)
+    )
 
 if __name__ == "__main__":
-    assets = ['BTCUSDT', 'ETHUSDT', 'BNBUSDT']
-    binance_ws = BinanceWebSocket(assets)
-    binance_ws.run()
-    # Note: `get_ask_prices` may not immediately have data right after `run` due to the asynchronous nature of WebSockets.
-    # You might need to wait for messages to be received or use a callback/event to fetch prices after they're updated.
+    asyncio.run(main())
