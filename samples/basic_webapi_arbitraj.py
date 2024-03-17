@@ -24,7 +24,7 @@ class BinanceWebSocket:
                 await self.on_message(message)
             print("Closed connection")
 
-    def get_ask_prices(self):
+    def get_all_ask_prices(self):
         return {asset: self.ask_prices[asset] for asset in self.ask_prices if self.ask_prices[asset] is not None}
 
 class ArbitrageCalculator:
@@ -46,7 +46,7 @@ class ArbitrageCalculator:
 
 async def check_arbitrage_opportunity(binance_ws, arbitrage_calculator):
     while True:
-        ask_prices = binance_ws.get_ask_prices()
+        ask_prices = binance_ws.get_all_ask_prices()
         if ask_prices:
             opportunity_exists = arbitrage_calculator.calculate_triangular_arbitrage_availability(ask_prices)
             print(f"Arbitrage Opportunity: {'Yes' if opportunity_exists else 'No'}")
