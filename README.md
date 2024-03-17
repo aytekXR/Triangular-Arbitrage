@@ -8,6 +8,8 @@ This project implements a basic framework for identifying potential triangular a
 - Supports multiple cryptocurrency pairs for arbitrage calculation.
 - Dynamically checks for triangular arbitrage opportunities among a set of assets.
 - Easy to extend and customize for different assets or additional strategies.
+- Includes a `ArbitrageCalculator` class for evaluating arbitrage opportunities based on the latest market data.
+- Utilizes asynchronous programming for efficient real-time data handling.
 
 ## Requirements
 
@@ -42,6 +44,7 @@ By default, the script is configured to monitor a predefined set of cryptocurren
 - `BinanceWebSocket.py`: Contains the `BinanceWebSocket` class for connecting to the Binance WebSocket API and fetching real-time price data.
 - `ArbitrageCalculator.py`: Contains the `ArbitrageCalculator` class for calculating potential triangular arbitrage opportunities.
 - `main.py`: The main entry point of the application. Initializes the WebSocket connection and periodically checks for arbitrage opportunities.
+- Helper functions for asset pair creation and data parsing are included to enhance flexibility and ease of use.
 
 ## Customization
 
