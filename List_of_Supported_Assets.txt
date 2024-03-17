@@ -1,0 +1,165 @@
+Asset	Networks	Trading Pairs
+0x (ZRX)	ERC20	ZRX/USDT
+1inch Network (1INCH)	ERC20/BEP20	1INCH/USDT
+Aave (AAVE)	ERC20/BEP20	AAVE/USDT
+AdEx (ADX)	ERC20	AdEx/USDT
+Alchemy Pay (ACH)	ERC20	ACH/USDT
+Algorand (ALGO)	Algorand	ALGO/USDT
+Alien Worlds (TLM)	ERC20/BEP20	TLM/USDT
+Alpine F1 Team Fan Token (ALPINE)	BEP20	ALPINE/USDT
+Ampleforth (FORTH)	ERC20	FORTH/USDT
+Ankr (ANKR)	ERC20/BEP20	ANKR/USDT
+ApeCoin (APE)	ERC20	APE/USDT    
+API3 (API3)	ERC20	API3/USDT
+Aptos (APT)	Aptos	APT/USDT
+Arbitrum (ARB)	Arbitrum/ERC20	ARB/USDT
+Astar (ASTR)	Astar	ASTR/USDT
+Audius (AUDIO) 	ERC20	AUDIO/USDT
+Avalanche (AVAX)	Avalanche C-CHAIN	AVAX/USDT; AVAX/BTC
+Axelar (AXL)	ERC20	AXL/USDT
+Axie Infinity (AXS)	ERC20	AXS/USDT
+Balancer (BAL)	ERC20/BEP20	BAL/USDT
+Bancor (BNT)	ERC20/BEP20	BNT/USDT
+Band Protocol (BAND)	Band Protocol (memo required)/BEP20	BAND/USDT
+Basic Attention Token (BAT)	ERC20/BEP20	BAT/USDT
+Biconomy (BICO)	ERC20	BICO/USDT 
+Bitcoin (BTC)	Bitcoin/BEP2 (memo required)/BEP20	BTC/USDT; BTC/USDC
+Bitcoin Cash (BCH)	Bitcoin Cash/BEP2 (memo required)/BEP20	BCH/USDT
+Blur (BLUR)	ERC20	BLUR/USDT
+BNB (BNB)	BEP2 (memo required)/ERC20/BEP20	BNB/USDT; BNB/BTC
+Boson Protocol (BOSON)	ERC20	BOSON/USDT
+Braintrust (BTRST)	ERC20	BTRST/USDT
+Cardano (ADA)	Cardano/BEP2 (memo required)/BEP20	ADA/USDC; ADA/USDT; ADA/BTC; ADA/ETH
+Cartesi (CTSI)	ERC20/BEP20	CTSI/USDT
+Celer Network (CELR)	ERC20/BEP20	CELR/USDT
+Celo (CELO)	Celo	CELO/USDT
+ChainLink (LINK)	BEP2 (memo required)/ERC20/BEP20	LINK/USDT; LINK/BTC
+Chiliz (CHZ)	ERC20	CHZ/USDT
+Clover Finance (CLV)	ERC20/BEP20	CLV/USDT
+Compound (COMP)	ERC20/BEP20	COMP/USDT
+Cosmos (ATOM)	Atom (memo required)/BEP20	ATOM/USDT
+COTI (COTI)	ERC20/BEP20	COTI/USDT
+CUDOS (CUDOS)	ERC20	CUDOS/USDT
+Curve (CRV)	ERC20	CRV/USDT
+DAI (DAI)	ERC20/BEP20	DAI/USDT
+Dash (DASH)	Dash	DASH/USDT
+Decentraland (MANA)	ERC20	MANA/USDT
+DIA (DIA)	ERC20/BEP20	DIA/USDT
+DigiByte (DGB)	DigiByte	DGB/USDT
+Dogecoin (DOGE)	Dogecoin/BEP20	DOGE/USDT; DOGE/BTC
+eCash (XEC) 	BEP20	XEC/USDT
+Enjin Coin (ENJ)	ERC20	ENJ/USDT
+EOS (EOS)	EOS (memo required)/BEP20	EOS/USDT
+Ethereum (ETH)	ERC20/BEP2 (memo required)/BEP20/Optimism/Arbitrum	ETH/USDT; ETH/USDC; ETH/BTC
+Ethereum Classic (ETC)	Ethereum Classic/BEP20	ETC/USDT
+Ethereum Name Service (ENS)	ERC20	ENS/USDT
+Fantom (FTM)	Fantom/ERC20/BEP20	FTM/USDT
+FC Porto Fan Token (PORTO)	BEP20	PORTO/USDT
+Fetch.AI (FET)	Fetch.AI (memo required)/ERC20/BEP20	FET/USDT
+Filecoin (FIL)	Filecoin	FIL/USDT
+Floki Inu(FLOKI)	ERC20/BEP20	FLOKI/ USDT
+Flow Network (FLOW) 	BEP20/FLOW	FLOW/USDT
+Flux (FLUX)	BEP20	FLUX/USDT
+Forta (FORT)	ERC20	FORT/USDT
+Gala Games (GALA[v2])	ERC20	GALA/USDT
+Galxe (GAL)	ERC20/BEP20	GAL/USDT
+Geojam (JAM)	ERC20	JAM/USDT
+Gitcoin (GTC)	ERC20	GTC/USDT
+Golem (GLM)	ERC20	GLM/USDT
+Harmony (ONE)	Harmony (must use shard0)	ONE/USDT
+Hedera Hashgraph (HBAR)	Hedera Hashgraph (memo required)	HBAR/USDT
+Horizen (Zen)	Horizen	ZEN/USDT
+ICON (ICX)	ICON	ICX/USDT
+iExec (RLC)	ERC20	RLC/USDT
+Illuvium (ILV)	ERC20/BEP20	ILV/USDT
+Immutable X (IMX)	ERC20	IMX/USDT
+Internet Computer (ICP)	Internet Computer	ICP/USDT
+Internet of Services Token (IOST)	IOST (memo required)	IOST/USDT
+IOTA (MIOTA)	IOTA/BEP20	IOTA/USDT
+Kadena (KDA)	Kadena	KDA/USDT
+Kava (KAVA)	Kava (memo required)	KAVA/USDT
+Kusama (KSM)	Kusama/BEP20	KSM/USDT
+Kyber Network Crystal v2 (KNC)	ERC20	KNC/USDT
+Lazio Fan Token (LAZIO)	BEP20	LAZIO/USDT
+League of Kingdoms (LOKA)	ERC20	LOKA/USDT
+Lido DAO (LDO)	ERC20	LDO/USDT
+Lisk (LSK)	Lisk	LSK/USDT
+Litecoin (LTC)	Litecoin/BEP2 (memo required)/BEP20	LTC/USDT; LTC/BTC
+Livepeer (LPT)	ERC20	LPT/USDT
+Loom Network (LOOM)	ERC20	LOOM/USDT
+Loopring (LRC)	ERC20	LRC/USDT
+LTO Network (LTO)	ERC20/BEP20	LTO/USDT
+Maker (MKR)	ERC20/BEP20	MKR/USDT
+Marlin (POND)	ERC20/BEP20	POND/USDT
+Mask Network (MASK)	ERC20	MASK/USDT
+Mines of Dalarnia (DAR)	ERC20/BEP20	DAR/USDT
+MultiversX (EGLD)	EGLD/BEP20	EGLD/USDT
+MXC (MXC)	ERC20	MXC/USDT
+My Neighbor Alice (ALICE)	ERC20/BEP20	ALICE/USDT
+Nano (XNO)	Nano	XNO/USDT
+NEAR Protocol (NEAR)	BEP20, NEAR Mainnet	NEAR/USDT
+NEO (NEO)	NEP5	NEO/USDT
+Numeraire (NMR)	ERC20	NMR/USDT
+Oasis Network (ROSE)	Oasis	ROSE/USDT
+Ocean Protocol (OCEAN)	ERC20/BEP20	OCEAN/USDT
+Ontology Gas (ONG)
+
+Ontology	
+ONG/USDT
+
+Ontology (ONT)	Ontology/BEP20	ONT/USDT
+Optimism (OP)	Optimism	OP/USDT
+Orbs (ORBS)	ERC20	ORBS/USDT
+Orchid (OXT)	ERC20	OXT/USDT
+Origin Token (OGN)	ERC20	OGN/USDT
+OriginTrail (TRAC)	ERC20	TRAC/USDT
+Pax Gold (PAXG)	ERC20	PAXG/USDT
+Polkadot (DOT)	Polkadot	DOT/USDT
+Polygon (MATIC)	Polygon/ERC20/BEP20	MATIC/USDT; MATIC/BTC; MATIC/ETH
+Polymesh (POLYX)	Polymesh (memo required)	POLYX/USDT
+Prom (PROM)	ERC20/BEP20	PROM/USDT
+Qtum (QTUM)	Qtum	QTUM/USDT
+Quant Network (QNT)	ERC20	QNT/USDT
+Radicle (RAD)	ERC20	RAD/USDT
+Ravencoin (RVN)	Ravencoin	RVN/USDT
+Reef (REEF)	ERC20/BEP20	REEF/USDT
+Ren (REN) 	ERC20	REN/USDT
+Render Network (RNDR)	ERC20	RNDR/USDT
+Request (REQ)	ERC20	REQ/USDT
+Santos FC Fan Token (SANTOS)	BEP20	SANTOS/USDT
+Shiba Inu (SHIB)	ERC20/BEP20	SHIB/USDT
+SKALE Network (SKL)	ERC20	SKL/USDT
+Smooth Love Potion (SLP)	ERC20/BEP20	SLP/USDT
+Solana (SOL)	Solana	SOL/USDC; SOL/USDT; SOL/BTC; SOL/ETH
+Stargate Finance (STG)	ERC20	STG/USDT
+Stellar Lumens (XLM)	Stellar Lumens (memo required)	XLM/USDT
+StormX (STMX)	ERC20	
+STMX/USDT
+Storj (STORJ)	ERC20	STORJ/USDT
+Sui (SUI)	Sui	SUI/USDT
+SuperRare (RARE)	ERC20	RARE/USDT
+Sushi (SUSHI)	ERC20/BEP20	SUSHI/USDT
+Synthetix Network Token (SNX)	ERC20/BEP20	SNX/USDT
+Syscoin (SYS)	Syscoin	SYS/USDT
+Tether (USDT)	ERC20/BEP2 (memo required)/BEP20/TRC20/Solana/Polygon/AVAXC	
+USDT/USD
+
+Ripple (XRP)	Ripple (memo required)	XRP/USDT
+Tezos (XTZ)	Tezos/BEP20	XTZ/USDT
+The Graph (GRT)	ERC20	GRT/USDT
+The Sandbox (SAND)	ERC20	SAND/USDT
+Theta Fuel (TFUEL)	Theta	THETA/USDT
+Theta Network (THETA)	Theta	THETA/USDT
+Threshold Network (T)	ERC20	T/USDT
+True USD (TUSD)	ERC20	TUSD/USDT
+Uniswap (UNI)	BEP2 (memo required)/ERC20/BEP20	UNI/USDT
+USD Coin (USDC)	ERC20/BEP20/TRC20/Solana/AVAXC	USDC/USDT
+Vechain (VET)	VeChain	VET/USDT
+VeThor Token (VTHO)	VeChain	VTHO/USDT
+Vite Network (VITE)	BEP20	VITE/USDT
+Voxies (VOXEL)	Polygon	VOXEL/USDT
+WAX Network (WAXP)	WAX (memo required)/ERC20	WAXP/USDT
+Wrapped Bitcoin (WBTC)	ERC20	WBTC/BTC
+yearn.finance (YFI)	ERC20	YFI/USDT
+Zcash (ZEC)	Zcash/BEP20	ZEC/USDT
+Zilliqa (ZIL)	Zilliqa	ZIL/USDT

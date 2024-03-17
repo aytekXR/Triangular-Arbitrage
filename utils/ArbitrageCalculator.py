@@ -1,13 +1,16 @@
 class ArbitrageCalculator:
     def calculate_triangular_arbitrage_availability(self, rates):
-        # Simplified example assuming we're checking for BTC->ETH->USDT->BTC arbitrage loop
         try:
-            btc_to_eth = 1 / rates['ethbtc@bookTicker']
-            eth_to_usdt = rates['ethusdt@bookTicker']
-            usdt_to_btc = 1 / rates['btcusdt@bookTicker']
+            # Convert the rates dictionary keys to a list and sort if necessary
+            keys = list(rates.keys())
             
-            final_btc = 1 * btc_to_eth * eth_to_usdt * usdt_to_btc
-            return final_btc > 1
+            # Assuming the keys are in the specific order required for arbitrage calculation
+            first_to_third = rates[keys[0]]
+            second_to_third = rates[keys[1]]
+            first_to_second = 1 / rates[keys[2]]
+            
+            triangular_arbitrage = first_to_second * second_to_third / first_to_third
+            return triangular_arbitrage
         except KeyError as e:
             print(f"Missing rate for currency pair: {e}")
             return False
