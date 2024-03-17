@@ -4,12 +4,12 @@ from utils.ArbitrageCalculator import *
 from utils.helpers import *
 
 async def main():
-    all_assets = get_list_of_supported_pairs('List_of_Supported_Assets.txt')
+    # all_assets = get_list_of_supported_pairs('List_of_Supported_Assets.txt')
+    all_assets =  ['BTCUSDT', 'ETHUSDT', 'ETHBTC', 'USDTTRY', 'BTCTRY', 'BTCEUR']
     binance_ws = BinanceWebSocket(all_assets)
     arbitrage_calculator = ArbitrageCalculator()
 
     coins = ['BTC', 'ETH', 'USDT']
-    assets = create_asset_pairs(coins)
     # Run both the WebSocket connection and the arbitrage check concurrently
     await asyncio.gather(
         binance_ws.connect(),

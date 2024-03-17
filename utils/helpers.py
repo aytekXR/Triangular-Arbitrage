@@ -3,7 +3,8 @@ import asyncio
 
 async def check_arbitrage_opportunity(binance_ws, calculator, coins):
     while True:
-        ask_prices = binance_ws.get_all_ask_prices()
+        ask_prices = binance_ws.get_ask_prices(create_asset_pairs(coins))
+        print(ask_prices)
         if ask_prices:
             if(calculator(ask_prices) > 1) :
                 print("Arbitrage Opportunity for:")
@@ -26,7 +27,7 @@ def create_asset_pairs(coins, priority_coin ='USDT'):
     remaining_coins = [coin for coin in coins if coin != priority_coin]
     for i in range(len(remaining_coins)):
         for j in range(i + 1, len(remaining_coins)):
-            assets.append(remaining_coins[i] + remaining_coins[j])
+            # assets.append(remaining_coins[i] + remaining_coins[j])
             assets.append(remaining_coins[j] + remaining_coins[i])
     
     return assets
