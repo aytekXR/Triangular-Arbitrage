@@ -1,3 +1,4 @@
+import asyncio
 class ArbitrageCalculator:
     def calculate_triangular_arbitrage_availability(self, rates):
         try:

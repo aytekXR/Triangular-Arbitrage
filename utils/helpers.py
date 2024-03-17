@@ -1,16 +1,18 @@
 import asyncio
 
-
 async def check_arbitrage_opportunity(binance_ws, calculator, coins):
     while True:
         ask_prices = binance_ws.get_ask_prices(create_asset_pairs(coins))
-        print(ask_prices)
+        # print(ask_prices)
         if ask_prices:
-            if(calculator(ask_prices) > 1) :
-                print("Arbitrage Opportunity for:")
+            arbitrage_score = calculator(ask_prices)
+            if(arbitrage_score > 1) :
+                print("Arbitrage Opportunity Score: {}".format(arbitrage_score))
                 print(ask_prices)
+            elif (arbitrage_score == 1):
+                print("Waiting for Binance API websocket data!")
             else:
-                print("No Arbitrage Opportunity yet")
+                print("No Arbitrage Opportunity yet! Score: {}".format(arbitrage_score) )
             await asyncio.sleep(1)
         
 

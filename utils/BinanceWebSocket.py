@@ -6,7 +6,7 @@ class BinanceWebSocket:
     def __init__(self, assets):
         self.base_url = "wss://stream.binance.com:9443/stream?streams="
         self.assets = [coin.lower() + '@bookTicker' for coin in assets]
-        self.ask_prices = {asset: 0 for asset in self.assets}
+        self.ask_prices = {asset: 1 for asset in self.assets}
         self.streams = '/'.join(self.assets)
         self.socket = f"{self.base_url}{self.streams}"
 
@@ -45,8 +45,3 @@ class BinanceWebSocket:
         formatted_sub_assets = [coin.lower() + '@bookTicker' for coin in sub_assets]
         # Filters and returns ask prices for specified sub_assets
         return {asset: self.ask_prices[asset] for asset in formatted_sub_assets if asset in self.ask_prices}
-
-# Example usage
-# Assuming the 'assets' list is defined elsewhere in your code
-# binance_ws = BinanceWebSocket(assets)
-# asyncio.run(binance_ws.connect())
